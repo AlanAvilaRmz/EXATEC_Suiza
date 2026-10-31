@@ -1,0 +1,1062 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EXATEC Suiza</title>
+<meta name="description" content="Sitio de la comunidad EXATEC Suiza: quiénes somos, mapa de capitulos regionales, mesa directiva, eventos y el Encuentro EXATEC Suiza 2027.">
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+  body { margin: 0; }
+  img { max-width: 100%; }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap');
+
+  :root{
+    --bg:#F4F7FC;
+    --surface:#FFFFFF;
+    --surface-2:#EAF0FB;
+    --text:#0B1830;
+    --text-muted:#57647A;
+    --border:#DCE6F5;
+    --blue:#0051CD;
+    --blue-deep:#0039A5;
+    --blue-pale:#E4ECFB;
+    --shadow: 0 1px 2px rgba(11,24,48,.05), 0 10px 26px -14px rgba(11,24,48,.18);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0A1226;
+      --surface:#101B36;
+      --surface-2:#16223F;
+      --text:#F1F5FC;
+      --text-muted:#A7B3CC;
+      --border:#223258;
+      --blue:#5C93F0;
+      --blue-deep:#8FB4E8;
+      --blue-pale:#1A2A4E;
+      --shadow: 0 1px 2px rgba(0,0,0,.4), 0 14px 32px -16px rgba(0,0,0,.6);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0A1226; --surface:#101B36; --surface-2:#16223F; --text:#F1F5FC;
+    --text-muted:#A7B3CC; --border:#223258; --blue:#5C93F0; --blue-deep:#8FB4E8;
+    --blue-pale:#1A2A4E; --shadow: 0 1px 2px rgba(0,0,0,.4), 0 14px 32px -16px rgba(0,0,0,.6);
+  }
+
+  *{box-sizing:border-box;}
+  body{background:var(--bg);color:var(--text);font-family:'IBM Plex Sans', system-ui, sans-serif;line-height:1.5;}
+  h1,h2,h3,.display{font-family:'Fraunces', Georgia, serif;font-weight:600;letter-spacing:-0.01em;text-wrap:balance;margin:0;}
+  a{color:inherit;}
+  .eyebrow{font-family:'IBM Plex Mono', monospace;font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);}
+  .container{max-width:1080px;margin-inline:auto;padding-inline:20px;}
+  .muted{color:var(--text-muted);}
+  .bleed{width:100vw;position:relative;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;}
+
+  /* ---- Header / tabs ---- */
+  header.top{position:sticky;top:env(safe-area-inset-top, 0px);z-index:20;background:var(--surface);border-bottom:1px solid var(--border);}
+  .brandbar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:12px;}
+  .brand{display:flex;align-items:center;gap:10px;}
+  .brand img{height:46px;width:auto;display:block;}
+
+  nav.tabs{display:flex;gap:4px;overflow-x:auto;padding-bottom:2px;scrollbar-width:none;}
+  nav.tabs::-webkit-scrollbar{display:none;}
+  nav.tabs button{
+    flex:none;appearance:none;border:none;background:transparent;color:var(--text-muted);
+    font-family:'IBM Plex Sans';font-weight:600;font-size:14px;padding:10px 14px;
+    border-radius:8px 8px 0 0;cursor:pointer;border-bottom:3px solid transparent;white-space:nowrap;
+  }
+  nav.tabs button:hover{color:var(--text);}
+  nav.tabs button[aria-selected="true"]{color:var(--text);border-bottom-color:var(--blue);}
+  nav.tabs button:focus-visible, a:focus-visible, .card:focus-visible{outline:2px solid var(--blue);outline-offset:2px;}
+
+  main{padding-block:0 80px;}
+  .panel{display:none;}
+  .panel.active{display:block;}
+  section + section{margin-top:56px;}
+  .container > section:first-child{margin-top:36px;}
+
+  /* ---- Hero (full-bleed blue band, like the reference site) ---- */
+  .hero-band{background:var(--blue-deep);color:#fff;padding-block:48px;margin-bottom:0;}
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:center;}
+  @media (max-width:760px){.hero-grid{grid-template-columns:1fr;}}
+  .hero-band .eyebrow{color:#BFD3FA;}
+  .hero-band h1{font-size:clamp(32px,5.4vw,50px);color:#fff;}
+  .hero-band p.lead{max-width:52ch;font-size:16.5px;color:#E3ECFC;margin-top:14px;}
+  .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px;}
+  .btn{font-family:'IBM Plex Sans';font-weight:700;font-size:13.5px;padding:12px 20px;border-radius:999px;border:1px solid transparent;cursor:pointer;}
+  .btn.primary{background:#fff;color:var(--blue-deep);}
+  .btn.ghost-light{background:transparent;border-color:rgba(255,255,255,.5);color:#fff;}
+  .btn.ghost{background:transparent;border-color:var(--border);color:var(--text);}
+
+  .hero-photo{border-radius:18px;overflow:hidden;border:1px solid rgba(255,255,255,.22);box-shadow:0 20px 48px -20px rgba(0,0,0,.5);}
+  .hero-photo img{display:block;width:100%;height:100%;object-fit:cover;aspect-ratio:737/325;}
+  .hero-photo-cap{font-size:11.5px;color:#BFD3FA;margin-top:8px;text-align:center;}
+
+  .stat-row{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;
+    background:var(--border);border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-block:28px;
+  }
+  .stat{background:var(--surface);padding:18px 16px;}
+  .stat b{display:block;font-family:'Fraunces';font-weight:700;font-size:28px;color:var(--blue-deep);}
+  .stat span{font-size:12.5px;color:var(--text-muted);}
+
+  .grid-2{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;}
+  @media (max-width:760px){.grid-2{grid-template-columns:1fr;}}
+
+  .card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px;box-shadow:var(--shadow);}
+  .list-check{list-style:none;margin:0;padding:0;display:grid;gap:12px;}
+  .list-check li{display:flex;gap:10px;align-items:flex-start;}
+  .list-check .dot{flex:none;width:8px;height:8px;border-radius:2px;margin-top:7px;background:var(--blue);transform:rotate(45deg);}
+
+  h2.section-title{font-size:clamp(22px,3.4vw,30px);}
+  .section-head{margin-bottom:22px;}
+  .section-head p{color:var(--text-muted);max-width:65ch;margin-top:8px;}
+
+  /* ---- Map (fixed navy module) ---- */
+  .map-wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:26px;align-items:start;}
+  @media (max-width:760px){.map-wrap{grid-template-columns:1fr;}}
+  .map-card{background:#081A3E;border:1px solid #1C3466;border-radius:16px;padding:18px;box-shadow:var(--shadow);}
+  svg.chmap{width:100%;height:auto;display:block;}
+  .chmap .grat{stroke:rgba(255,255,255,.08);stroke-width:1;}
+  .chmap .outline{fill:#1E4FB0;stroke:#7CA9EE;stroke-width:2.5;stroke-linejoin:round;}
+  .chmap .pin-dot{stroke:#081A3E;stroke-width:2;}
+  .chmap .pin-ring{fill:none;stroke-width:1.4;opacity:.55;}
+  .chmap .pin-label{font-family:'IBM Plex Sans';font-weight:700;font-size:13px;fill:#F2F6FC;}
+  .chmap .pin-sub{font-family:'IBM Plex Mono';font-size:9px;fill:#9FB3D1;}
+  .chmap .compass{fill:#7C93B8;font-family:'IBM Plex Mono';font-size:10px;}
+  .chmap g.pin{opacity:0;transform:translateY(7px);transition:opacity .45s ease, transform .45s cubic-bezier(.22,1.3,.4,1);}
+  .chmap g.pin.show{opacity:1;transform:translateY(0);}
+  .chmap .pin-dot-sm{fill:#9FB3D1;stroke:#081A3E;stroke-width:1.5;}
+
+  .region-list{display:grid;gap:10px;}
+  .region-item{display:flex;align-items:center;gap:12px;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:12px 14px;}
+  .swatch{width:11px;height:11px;border-radius:3px;flex:none;}
+  .region-item strong{display:block;font-size:14.5px;}
+  .region-item span{font-size:12.5px;color:var(--text-muted);}
+
+  .region-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:28px;}
+  .region-card h3{font-size:17px;margin-bottom:4px;font-family:'IBM Plex Sans';font-weight:700;}
+  .region-card .tagrow{display:flex;gap:6px;margin:10px 0 12px;flex-wrap:wrap;}
+  .region-card p{font-size:13.5px;color:var(--text-muted);}
+  .region-card .foot{display:flex;justify-content:space-between;align-items:center;margin-top:14px;padding-top:12px;border-top:1px dashed var(--border);font-size:12.5px;color:var(--text-muted);}
+  .pill{font-family:'IBM Plex Mono';font-size:11.5px;letter-spacing:.04em;padding:5px 10px;border-radius:999px;border:1px solid var(--border);background:var(--surface-2); color:var(--text-muted);}
+  .pillrow{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;}
+
+  /* ---- Team: uniform cards with real photos ---- */
+  .team-sub{margin:30px 0 14px;}
+  .team-sub h3{font-family:'IBM Plex Sans';font-weight:700;font-size:16px;}
+  .team-sub p{font-size:13px;color:var(--text-muted);margin-top:4px;}
+
+  .team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;}
+  .person{display:flex;flex-direction:column;gap:10px;height:100%;}
+  .avatar{
+    width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;overflow:hidden;
+    font-family:'IBM Plex Sans';font-weight:700;font-size:16px;letter-spacing:.02em;
+    background:var(--blue-pale);color:var(--blue-deep);border:1px solid var(--border);
+  }
+  .avatar img{width:100%;height:100%;object-fit:cover;display:block;}
+  .avatar.vacant{background:transparent;border:1.5px dashed var(--border);color:var(--text-muted);font-weight:500;font-size:20px;}
+  .person h3{font-size:15.5px;margin:0;font-family:'IBM Plex Sans';font-weight:700;}
+  .role{font-family:'IBM Plex Mono';font-size:10.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--blue-deep);}
+  .gen{font-family:'IBM Plex Mono';font-size:11px;color:var(--text-muted);}
+  .person.vacant .role, .person.vacant h3{color:var(--text-muted);}
+  .person.alumni .avatar{filter:grayscale(.15);}
+
+  /* ---- Events: each year is a native <details> the viewer opens/closes ---- */
+  .year-block{margin-bottom:14px;border:1px solid var(--border);border-radius:14px;background:var(--surface);overflow:hidden;}
+  .year-block[open]{padding-bottom:18px;}
+  .year-head{
+    display:flex;align-items:center;gap:12px;padding:16px 18px;cursor:pointer;list-style:none;
+    -webkit-tap-highlight-color:transparent;
+  }
+  .year-head::-webkit-details-marker{display:none;}
+  .year-head::marker{content:"";}
+  .year-head .num{font-family:'Fraunces';font-weight:700;font-size:28px;color:var(--blue-deep);}
+  .year-head .count{font-family:'IBM Plex Mono';font-size:11.5px;color:var(--text-muted);}
+  .year-head .line{flex:1;height:1px;background:var(--border);}
+  .year-head .chev{font-size:13px;color:var(--text-muted);transition:transform .15s ease;flex:none;}
+  .year-block[open] .year-head .chev{transform:rotate(180deg);}
+  .event-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;padding:4px 18px 0;}
+  .event-card{overflow:hidden;padding:0;}
+  .event-photo{
+    height:110px;display:flex;align-items:center;justify-content:center;font-size:30px;
+    background:
+      radial-gradient(120% 140% at 0% 0%, color-mix(in srgb, var(--blue) 24%, transparent), transparent 60%),
+      radial-gradient(120% 140% at 100% 100%, color-mix(in srgb, var(--blue-deep) 18%, transparent), transparent 60%),
+      var(--surface-2);
+    border-bottom:1px solid var(--border);
+  }
+  .event-body{padding:14px 16px 16px;}
+  .event-body h3{font-size:15px;margin-bottom:4px;font-family:'IBM Plex Sans';font-weight:700;}
+  .event-meta{font-size:11.5px;color:var(--text-muted);font-family:'IBM Plex Mono';margin-bottom:8px;}
+  .event-body p{font-size:13px;color:var(--text-muted);}
+
+  /* ---- 2027 ---- */
+  .hero2027{
+    border-radius:18px;padding:34px 26px;background:var(--blue-deep);color:#fff;box-shadow:var(--shadow);
+  }
+  .hero2027-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center;}
+  @media (max-width:760px){.hero2027-grid{grid-template-columns:1fr;}}
+  .hero2027-photo{border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,.25);}
+  .hero2027-photo img{display:block;width:100%;height:100%;object-fit:cover;aspect-ratio:3/2;}
+  .hero2027-photo-cap{font-size:11px;color:#BFD3FA;opacity:.85;margin:6px 2px 0;}
+  .hero2027 .eyebrow{color:#BFD3FA;}
+  .hero2027 h2{font-size:clamp(26px,5vw,42px);color:#fff;}
+  .hero2027 p.lead{color:#E3ECFC;}
+  .save-date{
+    display:inline-flex;gap:8px;align-items:center;margin-top:16px;
+    font-family:'IBM Plex Mono';font-size:12.5px;letter-spacing:.05em;
+    background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.3);padding:8px 12px;border-radius:999px;
+  }
+  .timeline{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin-top:30px;}
+  .tl-step{border-left:3px solid var(--border);padding-left:12px;}
+  .tl-step.active{border-left-color:var(--blue);}
+  .tl-step .k{font-family:'IBM Plex Mono';font-size:11px;color:var(--text-muted);}
+  .tl-step h4{font-size:14.5px;margin:4px 0;font-family:'IBM Plex Sans';font-weight:700;}
+  .tl-step p{font-size:12.5px;color:var(--text-muted);}
+
+  footer{border-top:1px solid var(--border);padding-block:26px 40px;text-align:center;}
+  footer p{font-size:12.5px;color:var(--text-muted);}
+</style>
+
+<header class="top">
+  <div class="container">
+    <div class="brandbar">
+      <div class="brand">
+        <img src="img/logo.png" alt="EXATEC Suiza">
+      </div>
+    </div>
+    <nav class="tabs" role="tablist" aria-label="Secciones">
+      <button role="tab" aria-selected="true" data-target="intro">Quiénes Somos</button>
+      <button role="tab" aria-selected="false" data-target="mapa">Comunidad y Mapa</button>
+      <button role="tab" aria-selected="false" data-target="equipo">Mesa Directiva</button>
+      <button role="tab" aria-selected="false" data-target="eventos">Eventos</button>
+      <button role="tab" aria-selected="false" data-target="2027">Encuentro 2027</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- ===================== INTRO ===================== -->
+  <section class="panel active" id="panel-intro">
+    <div class="hero-band bleed">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <span class="eyebrow">Asociación de Ex Alumnos del Tecnológico de Monterrey</span>
+            <h1 style="margin-top:10px;">La comunidad EXATEC en Suiza.</h1>
+            <p class="lead">Nuestra razón de ser es generar y fortalecer comunidades EXATEC en todo Suiza: conectar a los egresados del Tec de Monterrey que viven, estudian o trabajan en el país — de Ginebra a St. Gallen — a través de seis capítulos regionales que siguen creciendo cada año.</p>
+            <div class="cta-row">
+              <button class="btn primary">Únete a la comunidad</button>
+              <button class="btn ghost-light">Conoce más</button>
+            </div>
+          </div>
+          <div>
+            <div class="hero-photo">
+              <img src="img/comunidad-grupo.jpg" alt="Comunidad EXATEC Suiza reunida a orillas de un lago">
+            </div>
+            <p class="hero-photo-cap">La comunidad EXATEC Suiza en uno de sus encuentros</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="stat-row">
+        <div class="stat"><b class="count-num" data-count="6">0</b><span>Capítulos regionales</span></div>
+        <div class="stat"><b class="count-num" data-count="400">0</b><span>EXATEC en la red</span></div>
+        <div class="stat"><b class="count-num" data-count="30" data-suffix="+">0</b><span>Eventos organizados</span></div>
+        <div class="stat"><b>2022</b><span>Fundación formal</span></div>
+      </div>
+      <p style="font-size:11.5px;color:var(--text-muted);margin-top:-14px;margin-bottom:28px;">Fuente: Reportes Anuales EXATEC Suiza 2023–2025 (315 miembros a cierre de 2025) y cifras 2026 de la mesa directiva.</p>
+
+      <div class="grid-2">
+        <div>
+          <h2 class="section-title">¿Qué es EXATEC?</h2>
+          <p style="margin-top:10px;color:var(--text-muted);">
+            <strong style="color:var(--text)">EXATEC</strong> (Ex Alumnos del Tecnológico de Monterrey) es la red global que agrupa a todos los egresados del Tec, presente en más de 30 países. Fuera de México, la comunidad se organiza en capítulos locales que mantienen vivo el sentido de pertenencia, generan redes profesionales y acompañan a quienes llegan a un país nuevo.
+          </p>
+          <p style="margin-top:12px;color:var(--text-muted);">
+            <strong style="color:var(--text)">EXATEC Suiza</strong> nació de una reunión informal en Ginebra en el verano de 2020 y tomó protesta como asociación formal el 16 de julio de 2022. Desde entonces hemos crecido de 170 miembros en 2023 a 315 a finales de 2025 y cerca de 400 hoy, y en 2025 fuimos aceptados en la Association Suisse des Alumni des Grandes Écoles (ASAGE), junto a asociaciones de Oxford, Cambridge y HEC Paris.
+          </p>
+        </div>
+        <div class="card">
+          <h3 style="font-family:'IBM Plex Sans';font-weight:700;font-size:16px;margin-bottom:12px;">Nuestra misión</h3>
+          <ul class="list-check">
+            <li><span class="dot"></span><span>Fortalecer los lazos profesionales, académicos y personales entre los EXATEC residentes en Suiza.</span></li>
+            <li><span class="dot"></span><span>Ser puente entre la comunidad mexicana y la vida suiza — cultural, académica y de negocios.</span></li>
+            <li><span class="dot"></span><span>Recibir e integrar a quien acaba de llegar, para que nadie navegue Suiza en solitario.</span></li>
+            <li><span class="dot"></span><span>Celebrar México — su cultura, tradiciones y gastronomía — en cada región del país.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== MAPA ===================== -->
+  <section class="panel" id="panel-mapa">
+    <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Nuestra comunidad</span>
+      <h2 class="section-title" style="margin-top:8px;">Seis regiones, una sola comunidad</h2>
+      <p>EXATEC Suiza está organizado en seis capítulos regionales — el más reciente, Ticino, se formó en 2025 — que siguen los principales polos donde vive, estudia y trabaja la comunidad del Tec en el país. El mapa también señala Lausanne, Baden y Luzern, donde también hay presencia EXATEC dentro de los capítulos de Ginebra y Zürich.</p>
+    </div>
+
+    <div class="map-wrap">
+      <div class="map-card">
+        <svg class="chmap" viewBox="0 0 500 335" role="img" aria-labelledby="maptitle mapdesc">
+          <title id="maptitle">Mapa de Suiza con los seis grupos regionales EXATEC</title>
+          <desc id="mapdesc">Contorno real de Suiza, simplificado a partir de su frontera geográfica oficial, señalando Basel, Zürich, St. Gallen, Berna, Ginebra y Ticino.</desc>
+
+          <line class="grat" x1="0" y1="112" x2="500" y2="112"/>
+          <line class="grat" x1="0" y1="223" x2="500" y2="223"/>
+          <line class="grat" x1="167" y1="0" x2="167" y2="335"/>
+          <line class="grat" x1="333" y1="0" x2="333" y2="335"/>
+
+          <path id="ch-outline" class="outline" d=""></path>
+
+          <text class="compass" x="14" y="20">N ↑</text>
+
+          <!-- Basel -->
+          <g class="pin">
+            <circle class="pin-ring" cx="186" cy="60" r="11" style="stroke:#7CA9EE"/>
+            <circle class="pin-dot" cx="186" cy="60" r="5.5" style="fill:#7CA9EE"/>
+            <text class="pin-label" x="128" y="55">Basel</text>
+          </g>
+          <!-- Zürich -->
+          <g class="pin">
+            <circle class="pin-ring" cx="278" cy="85" r="11" style="stroke:#F2C75C"/>
+            <circle class="pin-dot" cx="278" cy="85" r="5.5" style="fill:#F2C75C"/>
+            <text class="pin-label" x="290" y="88">Zürich</text>
+          </g>
+          <!-- St. Gallen -->
+          <g class="pin">
+            <circle class="pin-ring" cx="358" cy="79" r="11" style="stroke:#6FE0C9"/>
+            <circle class="pin-dot" cx="358" cy="79" r="5.5" style="fill:#6FE0C9"/>
+            <text class="pin-label" x="370" y="77">St. Gallen</text>
+          </g>
+          <!-- Bern -->
+          <g class="pin">
+            <circle class="pin-ring" cx="173" cy="145" r="11" style="stroke:#FFFFFF"/>
+            <circle class="pin-dot" cx="173" cy="145" r="5.5" style="fill:#FFFFFF"/>
+            <text class="pin-label" x="143" y="173">Berna</text>
+          </g>
+          <!-- Geneva -->
+          <g class="pin">
+            <circle class="pin-ring" cx="48" cy="250" r="11" style="stroke:#F2C75C"/>
+            <circle class="pin-dot" cx="48" cy="250" r="5.5" style="fill:#F2C75C"/>
+            <text class="pin-label" x="6" y="285">Ginebra</text>
+          </g>
+          <!-- Ticino -->
+          <g class="pin">
+            <circle class="pin-ring" cx="317" cy="278" r="11" style="stroke:#7CA9EE"/>
+            <circle class="pin-dot" cx="317" cy="278" r="5.5" style="fill:#7CA9EE"/>
+            <text class="pin-label" x="292" y="311">Ticino</text>
+          </g>
+
+          <!-- Lausanne (satélite de Ginebra) -->
+          <g class="pin">
+            <circle class="pin-dot-sm" cx="95" cy="205" r="3.5"/>
+            <text class="pin-label" x="103" y="208">Lausanne</text>
+          </g>
+          <!-- Baden (satélite de Zürich) -->
+          <g class="pin">
+            <circle class="pin-dot-sm" cx="255" cy="72" r="3.5"/>
+            <text class="pin-label" x="229" y="66">Baden</text>
+          </g>
+          <!-- Luzern (satélite de Zürich) -->
+          <g class="pin">
+            <circle class="pin-dot-sm" cx="255" cy="131" r="3.5"/>
+            <text class="pin-label" x="236" y="147">Luzern</text>
+          </g>
+        </svg>
+      </div>
+
+      <div class="region-list">
+        <div class="region-item"><span class="swatch" style="background:#7CA9EE"></span><div><strong>Basel</strong><span>Industria farmacéutica y ciencias de la vida</span></div></div>
+        <div class="region-item"><span class="swatch" style="background:#F2C75C"></span><div><strong>Zürich</strong><span>Finanzas, tecnología y ETH Zürich</span></div></div>
+        <div class="region-item"><span class="swatch" style="background:#6FE0C9"></span><div><strong>St. Gallen</strong><span>Negocios y HSG</span></div></div>
+        <div class="region-item"><span class="swatch" style="background:#FFFFFF;border:1px solid var(--border)"></span><div><strong>Berna</strong><span>Capital federal e instituciones públicas</span></div></div>
+        <div class="region-item"><span class="swatch" style="background:#F2C75C"></span><div><strong>Ginebra</strong><span>Organismos internacionales y CERN</span></div></div>
+        <div class="region-item"><span class="swatch" style="background:#7CA9EE"></span><div><strong>Ticino</strong><span>Suiza italiana, el capítulo más joven</span></div></div>
+      </div>
+    </div>
+
+    <div class="region-cards">
+      <div class="card region-card">
+        <h3>Zürich</h3>
+        <div class="tagrow"><span class="pill">Centro-norte</span><span class="pill">Tech &amp; Finance</span></div>
+        <p>El grupo más numeroso: banca, consultoría, tecnología y estudiantes de ETH Zürich. Sede de Google, IBM y otras empresas de tech. Incluye a los EXATEC de Baden y Luzern.</p>
+        <div class="foot"><span><b class="count-num" data-count="219">0</b> miembros</span><span>190 en Zürich ciudad + Baden (15) y Luzern (14)</span></div>
+      </div>
+      <div class="card region-card">
+        <h3>Ginebra</h3>
+        <div class="tagrow"><span class="pill">Suroeste</span><span class="pill">Internacional</span></div>
+        <p>Comunidad ligada a organismos internacionales, ONG, CERN y la UNIGE (Universidad de Ginebra). También sede de Rolex y Patek Philippe. Incluye a los EXATEC de Lausanne, con la EPFL y la UNIL.</p>
+        <div class="foot"><span><b class="count-num" data-count="151">0</b> miembros</span><span>120 en Ginebra ciudad + Lausanne (31)</span></div>
+      </div>
+      <div class="card region-card">
+        <h3>St. Gallen</h3>
+        <div class="tagrow"><span class="pill">Noreste</span><span class="pill">Negocios</span></div>
+        <p>Grupo compacto alrededor de la Universidad de St. Gallen (HSG) y su cercanía con Zürich y Liechtenstein.</p>
+        <div class="foot"><span><b class="count-num" data-count="37">0</b> miembros</span><span>Capítulo St. Gallen</span></div>
+      </div>
+      <div class="card region-card">
+        <h3>Basel</h3>
+        <div class="tagrow"><span class="pill">Noroeste</span><span class="pill">Pharma &amp; Life Sciences</span></div>
+        <p>Núcleo de EXATEC en la industria farmacéutica y biotecnológica, en la frontera con Francia y Alemania. Sede mundial de Novartis y Roche.</p>
+        <div class="foot"><span><b class="count-num" data-count="55">0</b> miembros</span><span>Capítulo Basel</span></div>
+      </div>
+      <div class="card region-card">
+        <h3>Berna</h3>
+        <div class="tagrow"><span class="pill">Capital</span><span class="pill">Instituciones</span></div>
+        <p>Sede administrativa del país; comunidad diplomática, académica y de organismos federales. También es un polo importante en ciencia fundamental y tecnología, con la Universidad de Berna.</p>
+        <div class="foot"><span><b class="count-num" data-count="50">0</b> miembros</span><span>Capítulo Berna</span></div>
+      </div>
+      <div class="card region-card">
+        <h3>Ticino</h3>
+        <div class="tagrow"><span class="pill">Sur</span><span class="pill">Suiza italiana</span></div>
+        <p>La región de habla italiana, con vínculos cercanos a Milán.</p>
+        <div class="foot"><span><b class="count-num" data-count="15">0</b> miembros</span><span>Capítulo Ticino</span></div>
+      </div>
+    </div>
+    <p style="font-size:11.5px;color:var(--text-muted);margin-top:14px;">Cifras 2026 por capítulo regional. La suma por capítulo puede superar el total nacional de 400: igual que en los Reportes Anuales 2023–2025, algunos EXATEC participan en más de un grupo regional de WhatsApp.</p>
+    </div>
+  </section>
+
+  <!-- ===================== EQUIPO ===================== -->
+  <section class="panel" id="panel-equipo">
+    <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Grupo de trabajo</span>
+      <h2 class="section-title" style="margin-top:8px;">Mesa Directiva</h2>
+      <p>El equipo que impulsa a EXATEC Suiza hoy, y las personas que construyeron la asociación desde su fundación en 2022.</p>
+    </div>
+
+    <div class="team-sub">
+      <h3>Mesa Directiva 2026–2028</h3>
+      <p>St. Gallen y Ticino aún no tienen coordinador(a) asignado — ¡puede ser tu región!</p>
+    </div>
+    <div class="team-grid">
+      <div class="card person">
+        <div class="avatar"><img src="img/team/ana-de-la-fuente.jpg" alt="Ana de la Fuente"></div>
+        <span class="role">Presidenta</span>
+        <h3>Ana de la Fuente</h3>
+        <span class="gen">LIN 2002</span>
+      </div>
+      <div class="card person">
+        <div class="avatar"><img src="img/team/alan-avila.jpg" alt="Alan Ávila"></div>
+        <span class="role">Vicepresidente</span>
+        <h3>Alan Ávila</h3>
+        <span class="gen">INCO 2018</span>
+      </div>
+      <div class="card person">
+        <div class="avatar"><img src="img/team/mariana-diaz.jpg" alt="Mariana Díaz"></div>
+        <span class="role">Equipo organizador · Encuentro 2027</span>
+        <h3>Mariana Díaz</h3>
+        <span class="gen">LRI 2016</span>
+      </div>
+      <div class="card person">
+        <div class="avatar"><img src="img/team/gerardo-garcia.jpg" alt="Gerardo García"></div>
+        <span class="role">Líder · Capítulo Zürich y Redes Sociales</span>
+        <h3>Gerardo García</h3>
+        <span class="gen">IQA 2009</span>
+      </div>
+      <div class="card person">
+        <div class="avatar"><img src="img/team/nallely-rios.jpg" alt="Nallely Ríos"></div>
+        <span class="role">Líder · Capítulo Ginebra</span>
+        <h3>Nallely Ríos</h3>
+        <span class="gen">LRI 2014</span>
+      </div>
+      <div class="card person">
+        <div class="avatar"><img src="img/team/selvia-montemayor.jpg" alt="Selvia Montemayor"></div>
+        <span class="role">Líder · Capítulo Basel</span>
+        <h3>Selvia Montemayor</h3>
+        <span class="gen">LIN 2008</span>
+      </div>
+      <div class="card person">
+        <div class="avatar"><img src="img/team/raquel-pena.jpg" alt="Raquel Peña"></div>
+        <span class="role">Líder · Capítulo Berna</span>
+        <h3>Raquel Peña</h3>
+        <span class="gen">IQP 2021</span>
+      </div>
+      <div class="card person">
+        <div class="avatar"><img src="img/team/enrique-de-la-fuente.jpg" alt="Enrique de la Fuente"></div>
+        <span class="role">Coord. Generosidad y Filantropía</span>
+        <h3>Enrique de la Fuente</h3>
+        <span class="gen">IQA 2017</span>
+      </div>
+      <div class="card person">
+        <div class="avatar"><img src="img/team/cindy-montano.jpg" alt="Cindy Montaño"></div>
+        <span class="role">Coord. Emprendimiento y Desarrollo de Iniciativas</span>
+        <h3>Cindy Montaño</h3>
+        <span class="gen">LEM 2006</span>
+      </div>
+      <div class="card person">
+        <div class="avatar"><img src="img/team/cesar-guerra.jpg" alt="César Guerra"></div>
+        <span class="role">Coord. Relaciones Públicas</span>
+        <h3>César Guerra</h3>
+        <span class="gen">LIN 2000</span>
+      </div>
+    </div>
+
+    <div class="team-sub">
+      <h3>Mesa Directiva fundadora · 2022–2025</h3>
+      <p>El primer equipo, que tomó protesta el 16 de julio de 2022 y llevó a la asociación de 9 a más de 300 miembros.</p>
+    </div>
+    <div class="team-grid">
+      <div class="card person alumni">
+        <div class="avatar"><img src="img/team/mesa-fundadora/gerardo-garcia.jpg" alt="Gerardo García"></div>
+        <span class="role">Presidente</span>
+        <h3>Gerardo García</h3>
+        <span class="gen">IQA 2009</span>
+      </div>
+      <div class="card person alumni">
+        <div class="avatar"><img src="img/team/mesa-fundadora/javier-leon.jpg" alt="Javier León"></div>
+        <span class="role">Vicepresidente</span>
+        <h3>Javier León</h3>
+        <span class="gen">MA 2010</span>
+      </div>
+      <div class="card person alumni">
+        <div class="avatar"><img src="img/team/mesa-fundadora/maria-aja.jpg" alt="María de Lourdes Aja"></div>
+        <span class="role">Tesorera</span>
+        <h3>María de Lourdes Aja</h3>
+        <span class="gen">LCQ 2009</span>
+      </div>
+      <div class="card person alumni">
+        <div class="avatar"><img src="img/team/mesa-fundadora/cindy-montano.jpg" alt="Cindy Montaño"></div>
+        <span class="role">Coordinadora de Redes Sociales</span>
+        <h3>Cindy Montaño</h3>
+        <span class="gen">LEM 2006</span>
+      </div>
+      <div class="card person alumni">
+        <div class="avatar"><img src="img/team/mesa-fundadora/mariana-diaz.jpg" alt="Mariana Díaz"></div>
+        <span class="role">Coordinadora Regional de Geneva</span>
+        <h3>Mariana Díaz</h3>
+        <span class="gen">LRI 2016</span>
+      </div>
+      <div class="card person alumni">
+        <div class="avatar"><img src="img/team/mesa-fundadora/laila-villanueva.jpg" alt="Laila Villanueva"></div>
+        <span class="role">Coordinadora Regional de St. Gallen</span>
+        <h3>Laila Villanueva</h3>
+        <span class="gen">LRI 2010</span>
+      </div>
+      <div class="card person alumni">
+        <div class="avatar"><img src="img/team/mesa-fundadora/karl-lalanne.jpg" alt="Karl Lalanne"></div>
+        <span class="role">Coordinador Regional de Berna</span>
+        <h3>Karl Lalanne</h3>
+        <span class="gen">LIN 1998</span>
+      </div>
+      <div class="card person alumni">
+        <div class="avatar"><img src="img/team/mesa-fundadora/eduardo-flores.jpg" alt="Eduardo Flores"></div>
+        <span class="role">Coordinador de Filantropía</span>
+        <h3>Eduardo Flores</h3>
+        <span class="gen">ARQ 2004</span>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- ===================== EVENTOS ===================== -->
+  <section class="panel" id="panel-eventos">
+    <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Memoria EXATEC Suiza</span>
+      <h2 class="section-title" style="margin-top:8px;">Eventos pasados</h2>
+      <p>Eventos reales, tomados de los Reportes Anuales de EXATEC Suiza 2023, 2024 y 2025 y de la actividad 2026 — más de 35 encuentros entre las seis regiones desde la fundación de la asociación. Toca un año para abrirlo o cerrarlo.</p>
+    </div>
+
+    <details class="year-block" open>
+      <summary class="year-head"><span class="num">2026</span><span class="count"><b class="count-num" data-count="7">0</b> eventos</span><span class="line"></span><span class="chev">⌄</span></summary>
+      <div class="event-grid">
+        <div class="card event-card">
+          <div class="event-photo">✍️</div>
+          <div class="event-body">
+            <h3>Toma de protesta · Mesa Directiva 2026–2028</h3>
+            <div class="event-meta">Suiza · 2026</div>
+            <p>Ana de la Fuente asume la presidencia de una mesa directiva renovada, que incorpora a Selvia Montemayor, Alan Ávila y César Guerra, con Mariana Díaz y Gerardo García continuando desde la mesa fundadora.</p>
+          </div>
+        </div>
+        <div class="card event-card">
+          <div class="event-photo">🎭</div>
+          <div class="event-body">
+            <h3>Carnaval de Berna (Fasnacht)</h3>
+            <div class="event-meta">Berna · Marzo 2026</div>
+            <p>La comunidad se reunió para ver y vivir el tradicional carnaval bernés.</p>
+          </div>
+        </div>
+        <div class="card event-card">
+          <div class="event-photo">⚽</div>
+          <div class="event-body">
+            <h3>Viewing parties · Mundial 2026 (fase de grupos)</h3>
+            <div class="event-meta">Varias ciudades · Junio 2026</div>
+            <p>Varios capítulos organizaron reuniones para ver juntos los partidos de México en la fase de grupos de la Copa Mundial.</p>
+          </div>
+        </div>
+        <div class="card event-card">
+          <div class="event-photo">🏆</div>
+          <div class="event-body">
+            <h3>Viewing party · Final del Mundial 2026</h3>
+            <div class="event-meta">Varias ciudades · Julio 2026</div>
+            <p>Cierre del Mundial en comunidad, con transmisiones conjuntas de las fases finales del torneo.</p>
+          </div>
+        </div>
+        <div class="card event-card">
+          <div class="event-photo">💊</div>
+          <div class="event-body">
+            <h3>Pharma Networking</h3>
+            <div class="event-meta">Basel · 14 de noviembre de 2026</div>
+            <p>Encuentro de networking para EXATEC que trabajan en la industria farmacéutica y de ciencias de la vida en Suiza.</p>
+          </div>
+        </div>
+        <div class="card event-card">
+          <div class="event-photo">🗓️</div>
+          <div class="event-body">
+            <h3>Arranca la planeación del Encuentro EXATEC Suiza 2027</h3>
+            <div class="event-meta">Suiza · 2026</div>
+            <p>Mariana Díaz, como Responsable de Conferencias, encabeza el comité organizador del primer gran encuentro nacional de EXATEC Suiza.</p>
+          </div>
+        </div>
+        <div class="card event-card">
+          <div class="event-photo">👥</div>
+          <div class="event-body">
+            <h3>400 EXATEC en la red</h3>
+            <div class="event-meta">Suiza · 2026</div>
+            <p>La comunidad alcanza los 400 miembros, más del doble que hace tres años, repartidos en los seis capítulos del país.</p>
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <details class="year-block">
+      <summary class="year-head"><span class="num">2025</span><span class="count"><b class="count-num" data-count="8">0</b> eventos</span><span class="line"></span><span class="chev">⌄</span></summary>
+      <div class="event-grid">
+        <div class="card event-card">
+          <div class="event-photo">🇨🇭</div>
+          <div class="event-body">
+            <h3>Creación del capítulo Ticino</h3>
+            <div class="event-meta">Ticino · 2025</div>
+            <p>Sexto y más reciente capítulo regional de EXATEC Suiza, completando la cobertura de las seis regiones del mapa.</p>
+          </div>
+        </div>
+        <div class="card event-card">
+          <div class="event-photo">🏛️</div>
+          <div class="event-body">
+            <h3>Aceptación en ASAGE</h3>
+            <div class="event-meta">Suiza · Junio 2025</div>
+            <p>EXATEC Suiza fue aceptada en la Association Suisse des Alumni des Grandes Écoles, junto a asociaciones de Oxford, Cambridge, HEC Paris y Sciences Po.</p>
+          </div>
+        </div>
+        <div class="card event-card">
+          <div class="event-photo">🎄</div>
+          <div class="event-body">
+            <h3>Posada Berna</h3>
+            <div class="event-meta">Berna · Diciembre 2025</div>
+            <p>Posada navideña del capítulo Berna.</p>
+          </div>
+        </div>
+        <div class="card event-card">
+          <div class="event-photo">🎄</div>
+          <div class="event-body">
+            <h3>Posada Zürich</h3>
+            <div class="event-meta">Zürich · Diciembre 2025</div>
+            <p>Posada navideña del capítulo más numeroso de la asociación.</p>
+          </div>
+        </div>
+        <div class="card event-card">
+          <div class="event-photo">🎄</div>
+          <div class="event-body">
+            <h3>Posada Basel</h3>
+            <div class="event-meta">Basel · Diciembre 2025</div>
+            <p>Posada navideña del capítulo Basel.</p>
+          </div>
+        </div>
+        <div class="card event-card">
+          <div class="event-photo">🎄</div>
+          <div class="event-body">
+            <h3>Posada Ginebra</h3>
+            <div class="event-meta">Ginebra · Diciembre 2025</div>
+            <p>Posada navideña del capítulo Ginebra, para cerrar el año en comunidad.</p>
+          </div>
+        </div>
+        <div class="card event-card">
+          <div class="event-photo">🍻</div>
+          <div class="event-body">
+            <h3>Afterworks y Networking Dinners</h3>
+            <div class="event-meta">Zürich · Geneva · Basel · Berna · 2025</div>
+            <p>Continuación del ritmo mensual de encuentros regionales en los seis capítulos, con 315 miembros activos a cierre de año.</p>
+          </div>
+        </div>
+        <div class="card event-card">
+          <div class="event-photo">💀</div>
+          <div class="event-body">
+            <h3>Fiestas Mexicanas y Día de Muertos</h3>
+            <div class="event-meta">Varias ciudades · Sept.–Nov. 2025</div>
+            <p>Tercera edición consecutiva de las celebraciones culturales mexicanas en los capítulos suizos.</p>
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <details class="year-block">
+      <summary class="year-head"><span class="num">2024</span><span class="count"><b class="count-num" data-count="12">0</b> eventos</span><span class="line"></span><span class="chev">⌄</span></summary>
+      <div class="event-grid">
+        <div class="card event-card">
+          <div class="event-photo">🍻</div>
+          <div class="event-body">
+            <h3>Afterwork Zürich y Berna</h3>
+            <div class="event-meta">Zürich · Berna · Febrero 2024</div>
+            <p>Primeros afterworks del año en los dos capítulos con más miembros.</p>
+          </div>
+        </div>
+        <div class="card event-card">
+          <div class="event-photo">🥂</div>
+          <div class="event-body">
+            <h3>Networking Dinner Geneva</h3>
+            <div class="event-meta">Geneva · Abril 2024</div>
+            <p>Cena de networking junto con nuevos afterworks en Zürich y Berna ese mismo mes.</p>
+          </div>
+        </div>
+        <div class="card event-card">
+          <div class="event-photo">🌆</div>
+          <div class="event-body">
+            <h3>Networking Dinner Zug</h3>
+            <div class="event-meta">Zug · Mayo 2024</div>
+            <p>Primer evento de la comunidad en Zug, junto con un afterwork en Geneva.</p>
+          </div>
+        </div>
+        <div class="card event-card">
+          <div class="event-photo">🧺</div>
+          <div class="event-body">
+            <h3>Picnic EXATEC Zürich</h3>
+            <div class="event-meta">Zürich · Julio 2024</div>
+            <p>Tarde de picnic familiar a orillas del lago de Zürich.</p>
+          </div>
+        </div>
+        <div class="card event-card">
+          <div class="event-photo">🧺</div>
+          <div class="event-body">
+            <h3>Picnic EXATEC Geneva + Afterwork St. Gallen</h3>
+            <div class="event-meta">Geneva · St. Gallen · Agosto 2024</div>
+            <p>Picnic de verano en Geneva y primer afterwork documentado del capítulo St. Gallen.</p>
+          </div>
+        </div>
+        <div class="card event-card">
+          <div class="event-photo">🇲🇽</div>
+          <div class="event-body">
+            <h3>Youth Mexico Day 2024</h3>
+            <div class="event-meta">Organizado por la Embajada de México · Septiembre 2024</div>
+            <p>Participación de EXATEC Suiza en el evento de la Embajada de México para jóvenes mexicanos en el país.</p>
+          </div>
+        </div>
+        <div class="card event-card">
+          <div class="event-photo">🎉</div>
+          <div class="event-body">
+            <h3>Fiestas Mexicanas Zürich y Geneva</h3>
+            <div class="event-meta">Zürich · Geneva · Septiembre 2024</div>
+            <p>Celebraciones de independencia con música en vivo, comida y gran asistencia en ambos capítulos.</p>
+          </div>
+        </div>
+        <div class="card event-card">
+          <div class="event-photo">💀</div>
+          <div class="event-body">
+            <h3>Día de Muertos Basel</h3>
+            <div class="event-meta">Basel · Octubre 2024</div>
+            <p>Primera celebración de Día de Muertos del capítulo Basel, recién creado ese año.</p>
+          </div>
+        </div>
+        <div class="card event-card">
+          <div class="event-photo">🎡</div>
+          <div class="event-body">
+            <h3>Olma Festiva</h3>
+            <div class="event-meta">St. Gallen · Octubre 2024</div>
+            <p>Participación de la comunidad en la feria agrícola y cultural más grande de Suiza oriental.</p>
+          </div>
+        </div>
+        <div class="card event-card">
+          <div class="event-photo">💀</div>
+          <div class="event-body">
+            <h3>Celebración Día de Muertos Zürich</h3>
+            <div class="event-meta">Zürich · Noviembre 2024</div>
+            <p>La fiesta más grande del año: disfraces, papel picado y catrinas con decenas de EXATEC y sus invitados.</p>
+          </div>
+        </div>
+        <div class="card event-card">
+          <div class="event-photo">🇪🇺</div>
+          <div class="event-body">
+            <h3>Encuentro EXATEC Europa</h3>
+            <div class="event-meta">Madrid, España · Noviembre 2024</div>
+            <p>Delegación de EXATEC Suiza participó en el encuentro junto a las asociaciones de Alemania, España, Francia y más.</p>
+          </div>
+        </div>
+        <div class="card event-card">
+          <div class="event-photo">🥈</div>
+          <div class="event-body">
+            <h3>Actívate por tu Salud 4.0 · 2º lugar</h3>
+            <div class="event-meta">Reto virtual · 2024</div>
+            <p>17 participantes recaudaron $12,350 MXN para la 5ª Beca EXATEC por los Líderes del Mañana — el mejor resultado de la asociación hasta la fecha.</p>
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <details class="year-block">
+      <summary class="year-head"><span class="num">2023</span><span class="count"><b class="count-num" data-count="5">0</b> eventos</span><span class="line"></span><span class="chev">⌄</span></summary>
+      <div class="event-grid">
+        <div class="card event-card">
+          <div class="event-photo">🍽️</div>
+          <div class="event-body">
+            <h3>17 Networking Dinners</h3>
+            <div class="event-meta">Zürich · Geneva · Bern · St. Gallen · 2022–2023</div>
+            <p>Distintos espacios sociales a lo largo del primer año de gestión para fomentar la integración y vincular la colaboración entre EXATEC.</p>
+          </div>
+        </div>
+        <div class="card event-card">
+          <div class="event-photo">🏅</div>
+          <div class="event-body">
+            <h3>Actívate por tu Salud 3.0 · 5º lugar</h3>
+            <div class="event-meta">Reto virtual · Enero 2023</div>
+            <p>10 participantes de EXATEC Suiza aportaron $5,100 MXN a la Beca EXATEC por Líderes del Mañana, quedando 5º de 32 agrupaciones.</p>
+          </div>
+        </div>
+        <div class="card event-card">
+          <div class="event-photo">🇺🇳</div>
+          <div class="event-body">
+            <h3>EXATEC Talks: Sistema de Naciones Unidas</h3>
+            <div class="event-meta">Virtual · 2023</div>
+            <p>Primera charla de la serie "Historias que inspiran", con Mariana Díaz como ponente.</p>
+          </div>
+        </div>
+        <div class="card event-card">
+          <div class="event-photo">⚽</div>
+          <div class="event-body">
+            <h3>EXATEC Talks: El Deporte como Profesión</h3>
+            <div class="event-meta">Virtual · 2023</div>
+            <p>Segunda charla de "Historias que inspiran", sobre la Copa Mundial Femenil Sub-20 de la FIFA.</p>
+          </div>
+        </div>
+        <div class="card event-card">
+          <div class="event-photo">🎓</div>
+          <div class="event-body">
+            <h3>Programa Mentoring EXATEC</h3>
+            <div class="event-meta">Zürich · Ginebra · Berna · 2022–2023</div>
+            <p>EXATEC en Suiza acompañaron de forma remota a estudiantes del Tec en sus últimos semestres, en las ediciones de agosto 2022 a junio 2023.</p>
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <details class="year-block">
+      <summary class="year-head"><span class="num">2022</span><span class="count"><b class="count-num" data-count="4">0</b> eventos</span><span class="line"></span><span class="chev">⌄</span></summary>
+      <div class="event-grid">
+        <div class="card event-card">
+          <div class="event-photo">✍️</div>
+          <div class="event-body">
+            <h3>Toma de protesta · Mesa Directiva fundadora</h3>
+            <div class="event-meta">Suiza · 16 de julio de 2022</div>
+            <p>EXATEC Suiza queda constituida formalmente, cuatro años después de la primera reunión informal en Ginebra en 2020.</p>
+          </div>
+        </div>
+        <div class="card event-card">
+          <div class="event-photo">📸</div>
+          <div class="event-body">
+            <h3>Corporate Headshots Session</h3>
+            <div class="event-meta">Suiza · 2022</div>
+            <p>Sesión de fotografías profesionales gratuitas para mejorar los CV y perfiles de LinkedIn de los EXATEC.</p>
+          </div>
+        </div>
+        <div class="card event-card">
+          <div class="event-photo">💀</div>
+          <div class="event-body">
+            <h3>Altar de Muertos · 1er lugar</h3>
+            <div class="event-meta">Museo de Historia de Berna · 28–31 oct. 2022</div>
+            <p>"Ciencia y Arte desde el Mictlán", dedicado a Mario Molina, Remedios Varo y Eugenio Garza Sada, ganó el primer lugar por votación del público en el concurso de altares de la Embajada de México.</p>
+          </div>
+        </div>
+        <div class="card event-card">
+          <div class="event-photo">🥘</div>
+          <div class="event-body">
+            <h3>Reunión Navideña</h3>
+            <div class="event-meta">Suiza · Diciembre 2022</div>
+            <p>Primera cena navideña de la comunidad, para cerrar el año de la fundación.</p>
+          </div>
+        </div>
+      </div>
+    </details>
+    </div>
+  </section>
+
+  <!-- ===================== 2027 ===================== -->
+  <section class="panel" id="panel-2027">
+    <div class="container">
+    <div class="hero2027">
+      <div class="hero2027-grid">
+        <div>
+          <span class="eyebrow">Próximamente</span>
+          <h2 style="margin-top:8px;">Encuentro EXATEC Suiza 2027</h2>
+          <p class="lead" style="margin-top:10px;max-width:62ch;">
+            El gran encuentro nacional que estamos organizando: la primera vez que las seis regiones de EXATEC Suiza se reúnen presencialmente en un solo lugar, para celebrar lo que hemos construido a lo largo de todos estos años y planear lo que sigue.
+          </p>
+          <div class="save-date">📅 <b>Fecha por confirmar — 2027</b> &nbsp;·&nbsp; 📍 Sede por confirmar</div>
+
+          <div class="cta-row">
+            <button class="btn primary">Quiero ser voluntario</button>
+            <button class="btn ghost-light">Quiero patrocinar</button>
+          </div>
+        </div>
+        <div class="hero2027-photo">
+          <img src="img/oeschinensee.jpg" alt="Lago Oeschinensee, Suiza">
+          <p class="hero2027-photo-cap">Oeschinensee — imagen de referencia, pendiente de reemplazar</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-2" style="margin-top:32px;">
+      <div>
+        <h2 class="section-title">Qué estamos planeando</h2>
+        <ul class="list-check" style="margin-top:14px;">
+          <li><span class="dot"></span><span>Conferencias y paneles con EXATEC destacados en Suiza y México.</span></li>
+          <li><span class="dot"></span><span>Networking profesional entre las seis regiones y sectores.</span></li>
+          <li><span class="dot"></span><span>Cena de gala y celebración cultural mexicana.</span></li>
+          <li><span class="dot"></span><span>Actividades deportivas y de integración al estilo Borregos.</span></li>
+          <li><span class="dot"></span><span>Espacio para nuevas generaciones de EXATEC que están llegando a Suiza.</span></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3 style="font-family:'IBM Plex Sans';font-weight:700;font-size:16px;margin-bottom:12px;">Camino al 2027</h3>
+        <div class="timeline" style="grid-template-columns:1fr;gap:14px;margin-top:0;">
+          <div class="tl-step active">
+            <span class="k">2026</span>
+            <h4>Planeación y comité organizador</h4>
+            <p>Formación del comité, liderado por Mariana Díaz, y definición de sede.</p>
+          </div>
+          <div class="tl-step">
+            <span class="k">Finales de 2026</span>
+            <h4>Apertura de registro</h4>
+            <p>Inscripciones y llamado a patrocinadores.</p>
+          </div>
+          <div class="tl-step">
+            <span class="k">2027</span>
+            <h4>Encuentro EXATEC Suiza</h4>
+            <p>El gran encuentro nacional, en fecha y sede a confirmar.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <p>EXATEC Suiza · Zürich · Ginebra · St. Gallen · Basel · Berna · Ticino</p>
+    <p>Mesa Directiva, mapa y eventos 2022–2025 basados en los Reportes Anuales EXATEC Suiza. Cifras 2026 y Encuentro 2027 de referencia, a confirmar por la mesa directiva vigente.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var tabs = document.querySelectorAll('nav.tabs button');
+  var panels = {
+    intro: document.getElementById('panel-intro'),
+    mapa: document.getElementById('panel-mapa'),
+    equipo: document.getElementById('panel-equipo'),
+    eventos: document.getElementById('panel-eventos'),
+    '2027': document.getElementById('panel-2027')
+  };
+  tabs.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      tabs.forEach(function(b){ b.setAttribute('aria-selected','false'); });
+      Object.keys(panels).forEach(function(k){ panels[k].classList.remove('active'); });
+      btn.setAttribute('aria-selected','true');
+      panels[btn.dataset.target].classList.add('active');
+      window.scrollTo({top:0, behavior:'smooth'});
+      animatePanel(btn.dataset.target);
+    });
+  });
+  animatePanel('intro');
+})();
+
+// Count-up numbers and sequential map-pin reveal, replayed each time a panel is opened.
+function countUp(el, duration){
+  if (!el || el.dataset.counting === '1') return;
+  el.dataset.counting = '1';
+  var target = parseInt(el.getAttribute('data-count'), 10) || 0;
+  var suffix = el.getAttribute('data-suffix') || '';
+  var start = null;
+  function step(ts){
+    if (!start) start = ts;
+    var p = Math.min((ts - start) / duration, 1);
+    var eased = 1 - Math.pow(1 - p, 3);
+    el.textContent = Math.round(eased * target) + suffix;
+    if (p < 1) requestAnimationFrame(step);
+    else el.dataset.counting = '0';
+  }
+  requestAnimationFrame(step);
+}
+function countUpIn(container){
+  container.querySelectorAll('.count-num').forEach(function(el){
+    el.textContent = '0' + (el.getAttribute('data-suffix') || '');
+    countUp(el, 1100 + Math.random() * 500);
+  });
+}
+function revealPins(container){
+  var pins = container.querySelectorAll('.chmap g.pin');
+  pins.forEach(function(p){ p.classList.remove('show'); });
+  requestAnimationFrame(function(){
+    pins.forEach(function(p, i){
+      setTimeout(function(){ p.classList.add('show'); }, i * 160);
+    });
+  });
+}
+function animatePanel(name){
+  if (name === 'intro'){
+    countUpIn(document.getElementById('panel-intro'));
+  } else if (name === 'mapa'){
+    var mapa = document.getElementById('panel-mapa');
+    revealPins(mapa);
+    setTimeout(function(){ countUpIn(mapa); }, 250);
+  } else if (name === 'eventos'){
+    countUpIn(document.getElementById('panel-eventos'));
+  }
+}
+
+// Switzerland outline: real national border (geo-maps / OpenStreetMap-derived
+// countries-land-500m dataset, ~830-point ring), simplified with Ramer–Douglas–
+// Peucker to 328 points (finer tolerance than the first pass, for a crisper,
+// more accurate silhouette), projected equirectangular with longitude corrected
+// by cos(46.8°) to keep true proportions, then eased through a closed
+// Catmull-Rom -> cubic Bezier spline so corners stay crisp while edges read as
+// a coastline rather than a polygon.
+(function(){
+  var pts = [[187,56],[189,57],[196,54],[194,56],[196,59],[191,60],[193,64],[205,62],[209,59],[207,59],[209,56],[215,56],[220,62],[234,60],[245,51],[247,57],[248,57],[247,52],[250,52],[261,59],[273,57],[270,54],[276,49],[282,55],[284,52],[283,48],[287,46],[284,44],[271,49],[270,46],[265,44],[266,42],[265,40],[269,37],[269,35],[272,30],[281,29],[280,25],[285,26],[286,32],[289,26],[292,32],[295,31],[297,33],[294,36],[296,38],[295,41],[301,44],[303,41],[300,38],[303,35],[304,38],[309,40],[307,43],[312,47],[326,42],[348,50],[358,57],[358,62],[369,71],[373,71],[375,68],[379,73],[385,75],[384,80],[386,84],[381,86],[368,109],[369,115],[367,116],[369,118],[369,116],[371,124],[367,131],[387,129],[402,136],[406,135],[407,140],[405,143],[406,147],[419,152],[422,157],[428,160],[440,157],[441,148],[448,149],[447,146],[451,140],[455,138],[458,142],[458,144],[464,147],[463,156],[461,156],[463,158],[461,166],[458,168],[460,173],[456,175],[457,179],[454,182],[456,189],[460,188],[465,192],[463,202],[461,204],[458,201],[446,201],[445,198],[441,198],[442,193],[440,189],[438,192],[427,193],[427,197],[422,203],[421,216],[425,219],[431,218],[433,221],[428,232],[434,242],[431,246],[424,248],[422,246],[423,241],[417,238],[417,234],[416,233],[417,229],[413,225],[410,227],[408,225],[396,231],[392,229],[390,237],[378,237],[373,235],[369,227],[366,225],[366,212],[365,210],[366,207],[361,213],[356,207],[349,209],[345,218],[348,220],[348,227],[350,232],[346,241],[345,245],[343,246],[339,254],[329,261],[330,266],[329,269],[324,271],[322,273],[322,279],[324,279],[321,282],[323,284],[323,288],[330,292],[327,296],[325,303],[317,300],[313,302],[316,297],[314,285],[312,288],[312,285],[314,284],[301,280],[307,267],[298,264],[303,259],[307,259],[308,255],[306,253],[303,251],[304,257],[294,256],[295,259],[292,264],[284,261],[283,258],[284,256],[281,255],[277,248],[268,243],[269,241],[267,236],[270,231],[271,223],[270,216],[267,213],[255,218],[253,221],[256,224],[251,227],[245,236],[239,236],[234,242],[239,246],[242,253],[241,258],[236,262],[229,264],[228,268],[229,272],[227,276],[225,279],[217,279],[214,282],[213,290],[207,290],[202,286],[199,289],[194,282],[186,282],[185,280],[182,280],[182,284],[178,283],[167,292],[158,289],[155,294],[151,294],[148,298],[145,295],[140,298],[134,289],[134,284],[131,282],[132,281],[131,279],[124,269],[119,272],[118,271],[120,261],[112,260],[110,257],[112,253],[111,249],[117,239],[111,233],[108,228],[111,223],[124,224],[121,217],[99,207],[82,206],[74,213],[66,215],[61,220],[61,223],[55,225],[55,230],[51,234],[51,238],[49,238],[49,241],[53,242],[58,236],[57,239],[59,243],[64,242],[62,246],[55,250],[47,258],[39,257],[37,259],[34,258],[30,260],[34,252],[31,251],[32,248],[46,243],[44,238],[50,227],[40,220],[42,216],[41,213],[49,202],[45,197],[61,182],[77,170],[78,168],[75,164],[79,154],[76,148],[82,142],[95,138],[103,131],[101,128],[106,125],[105,123],[115,118],[116,115],[115,114],[125,105],[125,97],[131,96],[131,93],[136,90],[131,86],[118,89],[122,81],[124,81],[124,78],[130,75],[128,69],[149,69],[146,76],[152,77],[154,79],[162,76],[167,78],[174,72],[170,71],[171,69],[176,71],[179,69],[178,65],[181,64],[178,63]];
+  function smoothClosedPath(points){
+    var n = points.length, d = "";
+    for (var i = 0; i < n; i++){
+      var p0 = points[(i - 1 + n) % n];
+      var p1 = points[i];
+      var p2 = points[(i + 1) % n];
+      var p3 = points[(i + 2) % n];
+      var c1x = p1[0] + (p2[0] - p0[0]) / 6;
+      var c1y = p1[1] + (p2[1] - p0[1]) / 6;
+      var c2x = p2[0] - (p3[0] - p1[0]) / 6;
+      var c2y = p2[1] - (p3[1] - p1[1]) / 6;
+      if (i === 0) d += "M" + p1[0] + "," + p1[1] + " ";
+      d += "C" + c1x + "," + c1y + " " + c2x + "," + c2y + " " + p2[0] + "," + p2[1] + " ";
+    }
+    return d + "Z";
+  }
+  var el = document.getElementById('ch-outline');
+  if (el) el.setAttribute('d', smoothClosedPath(pts));
+})();
+</script>
+</body>
+</html>
